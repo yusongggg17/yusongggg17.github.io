@@ -3,185 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Personal Portfolio</title>
+    <title>Yusong Liang - Creative Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Apply the chosen fonts */
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-body {
+            font-family: 'Lato', sans-serif;
+        }
         body {
-            font-family: 'Inter', sans-serif;
+            background-color: #f5f3ff; /* Light lavender background */
         }
-        .section-title {
-            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center;
+        /* Custom styles for the animated scroll-in effect */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .section {
-            @apply py-16 md:py-24;
-        }
-        .card {
-            @apply bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2;
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-700">
+<body class="font-body text-slate-700">
 
     <!-- Header & Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-violet-50/80 backdrop-blur-lg sticky top-0 z-50 border-b border-violet-200/80">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-800">JD</a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
-                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
-                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            <a href="#" class="font-heading text-2xl font-bold text-violet-600">AR</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-slate-600 hover:text-violet-600 transition-colors duration-300">About</a>
+                <a href="#projects" class="text-slate-600 hover:text-violet-600 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="bg-violet-500 text-white font-bold py-2 px-5 rounded-full hover:bg-violet-600 transition-all duration-300 shadow-lg shadow-violet-300/40 hover:scale-105 transform">Contact Me</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden">
+            <button id="mobile-menu-button" class="md:hidden text-slate-600">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About</a>
-            <a href="#projects" class="block py-2 text-gray-600 hover:text-indigo-600">Projects</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-slate-600 hover:text-violet-600">About</a>
+            <a href="#projects" class="block py-2 text-slate-600 hover:text-violet-600">Projects</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-violet-600">Contact</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="bg-indigo-600 text-white">
-            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-                <img src="https://placehold.co/150x150/FFFFFF/4F46E5?text=JD" alt="Your Name" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full object-cover border-4 border-indigo-400 shadow-xl mb-6">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Hi, I'm John Doe</h1>
-                <p class="text-lg md:text-xl text-indigo-200 max-w-2xl mx-auto">I'm a passionate Web Developer creating modern and responsive web applications.</p>
-                <a href="#projects" class="mt-8 inline-block bg-white text-indigo-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-transform duration-300 transform hover:scale-105">View My Work</a>
+        <section id="hero" class="py-24 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <img src="https://placehold.co/150x150/f5f3ff/a78bfa?text=AR" alt="Amelia Rose" class="w-36 h-36 mx-auto rounded-full object-cover border-4 border-white shadow-xl mb-6">
+                <h1 class="font-heading text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-600 to-purple-500 text-transparent bg-clip-text leading-tight mb-4">Yusong Liang</h1>
+                <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto mb-8">Presidential Scholar at Florida State University | Computer Science BS | Creative Developer </p>
+                <a href="#projects" class="bg-white text-violet-600 font-bold py-3 px-8 rounded-full shadow-lg shadow-violet-200/50 hover:bg-violet-500 hover:text-white transition-all duration-300 transform hover:scale-105">View My Work</a>
             </div>
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="section bg-white">
+        <section id="about" class="py-24 fade-in-section bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">About Me</h2>
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/3 text-center">
-                         <img src="https://placehold.co/400x400/E0E7FF/4F46E5?text=Portrait" alt="Portrait of John Doe" class="rounded-xl shadow-lg mx-auto">
+                <h2 class="font-heading text-4xl font-bold text-center text-slate-800 mb-4">A Little About Me</h2>
+                <div class="w-24 h-1 bg-violet-400 mx-auto mb-12"></div>
+                <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/400x400/ede9fe/a78bfa?text=Portrait" alt="Portrait of Yusong Liang" class="rounded-2xl shadow-lg">
                     </div>
-                    <div class="md:w-2/3">
-                        <p class="mb-4">Hello! I'm John, a software developer based in [Your City, State]. My journey into tech started with a fascination for how things work, which eventually led me to the world of web development. I specialize in front-end development and have a passion for building intuitive, beautiful, and performant user interfaces.</p>
-                        <p class="mb-6">When I'm not coding, you can find me exploring new hiking trails, trying out new coffee shops, or reading a good book.</p>
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">My Skills</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">HTML</span>
-                            <span class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">CSS & Tailwind</span>
-                            <span class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">JavaScript</span>
-                            <span class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">React</span>
-                            <span class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">Node.js</span>
-                            <span class="bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-full">Firebase</span>
-                        </div>
+                    <div class="md:w-2/3 text-slate-600">
+                         <p class="mb-4">Hello! I'm Yusong, a undergraduate student at Florida State University. I am currently pursing a dual degree of Computer Science and Cyber Criminology.</p>
+                         <p> Besides my academics, I am also a </p>
+                        <ul class="mt-6 grid grid-cols-2 gap-x-6 gap-y-3">
+                            <li class="flex items-center"><span class="text-violet-500 mr-2">✦</span>Game Developer</li>
+                            <li class="flex items-center"><span class="text-violet-500 mr-2">✦</span>Research Assisstant</li>
+                            <li class="flex items-center"><span class="text-violet-500 mr-2">✦</span>Academic Tutor</li>
+                            <li class="flex items-center"><span class="text-violet-500 mr-2">✦</span>Computer Technologies Intern</li>
+                        </ul>
+                        <a href=file:///C:/Users/18705/Downloads/Yusong%20Liang%20Academic%20Resume%20final_PlayStation%20(2).pdf>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="section bg-gray-50">
+        <section id="projects" class="py-28 fade-in-section">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">My Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="card">
-                        <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Project+One" alt="Project 1" class="w-full h-48 object-cover">
+                <h2 class="font-heading text-4xl font-bold text-center text-slate-800 mb-4">My Creations</h2>
+                <div class="w-24 h-1 bg-violet-400 mx-auto mb-16"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Project Card -->
+                    <div class="bg-white rounded-2xl shadow-lg shadow-violet-200/50 overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-300/60">
+                        <img src="https://placehold.co/600x400/ede9fe/a78bfa?text=Project+One" alt="Project 1" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">E-commerce Platform</h3>
-                            <p class="mb-4">A full-featured e-commerce website built with React, Node.js, and Stripe for payments.</p>
-                            <a href="#" class="text-indigo-600 font-semibold hover:underline">View Project &rarr;</a>
+                            <h3 class="font-heading text-xl font-bold text-slate-800 mb-2">Lifestyle Blog Theme</h3>
+                            <p class="text-slate-500 mb-4 text-sm">A clean and elegant theme designed for lifestyle bloggers, focusing on readability and beautiful imagery.</p>
+                             <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-violet-100 text-violet-700 text-xs font-semibold py-1 px-3 rounded-full">UI Design</span>
+                                <span class="bg-violet-100 text-violet-700 text-xs font-semibold py-1 px-3 rounded-full">Next.js</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Project 2 -->
-                    <div class="card">
-                        <img src="https://placehold.co/600x400/34D399/FFFFFF?text=Project+Two" alt="Project 2" class="w-full h-48 object-cover">
+                    <!-- Project Card -->
+                    <div class="bg-white rounded-2xl shadow-lg shadow-violet-200/50 overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-300/60">
+                        <img src="https://placehold.co/600x400/ede9fe/a78bfa?text=Project+Two" alt="Project 2" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Task Management App</h3>
-                            <p class="mb-4">A collaborative task management tool to help teams stay organized and productive.</p>
-                            <a href="#" class="text-indigo-600 font-semibold hover:underline">View Project &rarr;</a>
+                            <h3 class="font-heading text-xl font-bold text-slate-800 mb-2">Boutique E-commerce</h3>
+                            <p class="text-slate-500 mb-4 text-sm">A charming online store for a local boutique, featuring a seamless checkout experience.</p>
+                             <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-violet-100 text-violet-700 text-xs font-semibold py-1 px-3 rounded-full">React</span>
+                                <span class="bg-violet-100 text-violet-700 text-xs font-semibold py-1 px-3 rounded-full">Shopify API</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- Project 3 -->
-                    <div class="card">
-                        <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Project+Three" alt="Project 3" class="w-full h-48 object-cover">
+                    <!-- Project Card -->
+                    <div class="bg-white rounded-2xl shadow-lg shadow-violet-200/50 overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-300/60">
+                        <img src="https://placehold.co/600x400/ede9fe/a78bfa?text=Project+Three" alt="Project 3" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Personal Blog</h3>
-                            <p class="mb-4">A responsive and fast personal blog built with a static site generator and Markdown.</p>
-                            <a href="#" class="text-indigo-600 font-semibold hover:underline">View Project &rarr;</a>
+                            <h3 class="font-heading text-xl font-bold text-slate-800 mb-2">Wellness & Yoga App</h3>
+                            <p class="text-slate-500 mb-4 text-sm">A mobile-first web app designed to promote mindfulness with guided meditations and yoga flows.</p>
+                             <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-violet-100 text-violet-700 text-xs font-semibold py-1 px-3 rounded-full">Vue.js</span>
+                                <span class="bg-violet-100 text-violet-700 text-xs font-semibold py-1 px-3 rounded-full">Firebase</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- Contact Section -->
-        <section id="contact" class="section bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="text-center text-lg max-w-2xl mx-auto mb-10">I'm currently open to new opportunities and collaborations. Feel free to send me a message!</p>
-                <div class="max-w-xl mx-auto">
-                    <form action="#" method="POST" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" name="name" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="w-full md:w-auto inline-flex justify-center py-3 px-12 border border-transparent shadow-sm text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-transform duration-300 transform hover:scale-105">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
+        <section id="contact" class="py-24 fade-in-section bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="font-heading text-4xl font-bold text-slate-800 mb-4">Let's Connect</h2>
+                <div class="w-24 h-1 bg-violet-400 mx-auto mb-6"></div>
+                <p class="max-w-xl mx-auto text-slate-500 mb-10">I would love to hear about your project or just chat about design and code. Feel free to reach out!</p>
+                <a href="mailto:your-email@example.com" class="bg-violet-500 text-white font-bold py-4 px-10 rounded-full hover:bg-violet-600 transition-all duration-300 shadow-lg shadow-violet-300/40 hover:scale-105 transform text-lg">Say Hello</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; 2025 John Doe. All rights reserved.</p>
-            <div class="mt-4 flex justify-center space-x-4">
-                <!-- Replace with your actual social media links -->
-                <a href="#" class="text-gray-400 hover:text-white">GitHub</a>
-                <a href="#" class="text-gray-400 hover:text-white">LinkedIn</a>
-                <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
-            </div>
+    <footer class="bg-f5f3ff">
+        <div class="container mx-auto px-6 py-6 text-center text-slate-500">
+            <p>Designed with ♡ by Amelia Rose</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
+        // --- Mobile menu toggle ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Smooth scrolling for navigation links
+        // --- Smooth scrolling for navigation links ---
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-                // Close mobile menu on link click
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
             });
         });
+
+        // --- Scroll-in animations ---
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
+
